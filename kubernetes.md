@@ -1,6 +1,6 @@
 # Kubernetes Architecture
 
-![kubernetes_architecture_diagram.png](attachment:kubernetes_architecture_diagram.png)
+![alt text](images/kubernetes_architecture_diagram.png)
 
 
 * kubectl: calls the high-level api 
