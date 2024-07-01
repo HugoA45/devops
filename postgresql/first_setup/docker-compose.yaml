@@ -1,0 +1,19 @@
+version: '3.1'                                # specifies docker version
+services:                                     # services (containers) you wanna run
+  db:
+    image: postgres:15.0                      # postgres image pulled
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin123
+    ports:
+    - 5000:5432                               # container’s port 5432
+                                              # (PostgreSQL default)
+                                              # is mapped to host port 5000
+    volumes:
+    - ./pgdata:/var/lib/postgresql/data       # Data is persisted in the
+                                              # ./pgdata directory on the host machine
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080   
